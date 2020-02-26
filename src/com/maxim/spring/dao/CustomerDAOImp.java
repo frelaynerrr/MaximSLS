@@ -15,6 +15,7 @@ import com.maxim.spring.entity.Customer;
 	// for spring to be able to scan it
 
 @Repository
+@Transactional
 public class CustomerDAOImp implements CustomerDAO {
 
 	// inject the session factory by using Autowired

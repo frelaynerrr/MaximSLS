@@ -25,7 +25,7 @@ public class CustomerController {
 		
 		List<Customer> theCustomers = customerDAO.getCustomers();
 		
-		theModel.addAttribute("custumers",theCustomers);
+		theModel.addAttribute("customers",theCustomers);
 		
 		return "customers-list";
 	}
