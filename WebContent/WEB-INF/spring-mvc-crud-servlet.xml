@@ -31,14 +31,14 @@
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;allowPublicKeyRetrieval=true;serverTimezone=UTC" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;serverTimezone=UTC" /> <!-- allowPublicKeyRetrieval=true;serverTimezone=UTC -->
         <property name="user" value="rusumaxim" />
         <property name="password" value="rusumaxim" /> 
 
         <!-- these are connection pool properties for C3P0 -->
-        <property name="minPoolSize" value="5" />
+        <property name="minPoolSize" value="5" /> <!-- 5 -->
         <property name="maxPoolSize" value="20" />
-        <property name="maxIdleTime" value="30000" />
+        <property name="maxIdleTime" value="30000" /> <!-- 30000 -->
 	</bean>  
 	
     <!-- Step 2: Setup Hibernate session factory -->
