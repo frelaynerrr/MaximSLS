@@ -26,7 +26,6 @@ public class CustomerDAOImp implements CustomerDAO {
 	// let spring to start and stop transacion itself
 	
 	@Override
-	@Transactional
 	public List<Customer> getCustomers() {
 		
 		
