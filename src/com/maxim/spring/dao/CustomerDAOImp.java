@@ -33,10 +33,20 @@ public class CustomerDAOImp implements CustomerDAO {
 		// - > return the resul list
 		
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query<Customer> theQuery = currentSession.createQuery("from Customer", Customer.class);
+		Query<Customer> theQuery = currentSession.createQuery("from Customer order by lastName", Customer.class);
 		
 		List<Customer> customers = theQuery.getResultList();
 		return customers;
+	}
+
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		
+		// get current hibernate session and save customer
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		currentSession.save(theCustomer);
 	}
 
 }
